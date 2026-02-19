@@ -21,6 +21,6 @@ class ProductController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        return response()->json(['message' => 'Product created successfully']);
+        return response()->json(['message' => 'Product created successfully'], 201);
     }
 }
