@@ -4,13 +4,16 @@ namespace App\Http\Controllers\Orders;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Order;
 
 class OrderController extends Controller
 {
     //
     public function index()
     {
-        return response()->json(['message' => 'Order Index']);
+        $orders = Order::select('id', 'order_number', 'customer_name')->get();
+
+        return response()->json($orders, 200);
     }
 
 
