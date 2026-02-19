@@ -11,14 +11,11 @@ class ProductController extends Controller
     //
 
     public function store(Request $request)
-    {
-        Log::info('store_method', $request->all());
-
+    { 
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
-            'qaunaity' => 'required|numeric',
-            'notes' => 'nullable|string',
+            'qaunaity' => 'required|numeric'
         ]);
 
         return response()->json(['message' => 'Product created successfully'], 201);
