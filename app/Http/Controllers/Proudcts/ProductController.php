@@ -10,6 +10,16 @@ class ProductController extends Controller
 {
     //
 
+    public function index()
+    {
+        return response()->json(['message' => 'Product index']);
+    }
+
+    public function show($id)
+    {
+        return response()->json(['message' => "Product details for ID: $id"]);
+    }
+
     public function store(Request $request)
     { 
         $request->validate([
