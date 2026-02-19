@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Proudcts;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
