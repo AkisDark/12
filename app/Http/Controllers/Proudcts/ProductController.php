@@ -8,4 +8,10 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
+
+    public function store(Request $request)
+    {
+
+        return response()->json(['message' => 'Product created successfully']);
+    }
 }
